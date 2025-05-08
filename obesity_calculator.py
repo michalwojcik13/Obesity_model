@@ -4,9 +4,11 @@ from model import process_and_predict
 
 def main():
     st.set_page_config(layout="wide")
-    st.title("📊 User Data Collection Form")
+    st.title("📊 Welcome to the Obesity Calculator")
 
     st.header("Please fill in your details:")
+    st.markdown("---") # Separator
+
 
     # Create two columns for better layout
     col1, col2 = st.columns(2)
@@ -110,18 +112,18 @@ def main():
             'physical_activity_perweek': [physical_activity_perweek],
             'siblings': [siblings],
             'smoke': [smoke],
-            'transportation': [transportation.replace(" ", "_")], # Ensure consistency
+            'transportation': [transportation], # Ensure consistency
             'veggies_freq': [veggies_freq],
             'water_daily': [water_daily],
             'weight': [weight]
         })
 
-        st.subheader("Collected User Data:")
-        st.dataframe(user_data)
+        # st.subheader("Collected User Data:")
+        # st.dataframe(user_data)
 
         prediction = process_and_predict(user_data)
 
-        st.write("You have:")
+        st.subheader("Your obesity classification:")
         st.write(prediction)
 
 if __name__ == '__main__':
