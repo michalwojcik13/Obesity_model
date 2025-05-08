@@ -152,25 +152,25 @@ def process_and_predict(input_df: pd.DataFrame) -> str:
     return hash_obesity_inverted[prediction[0]]
 
 # Usage example:
-user_data = pd.DataFrame({
-    'age': [21], 
-    'alcohol_freq': ['Never'],
-    'caloric_freq': ['no'],
-    'devices_perday': ['up to 5'],
-    'eat_between_meals': ['Sometimes'],
-    'gender': ['Female'],
-    'height': [1.62], 
-    'meals_perday': [3],
-    'monitor_calories': ['no'],
-    'parent_overweight': ['yes'],
-    'physical_activity_perweek': ['None'], 
-    'siblings': [3],
-    'smoke': ['no'],
-    'transportation': ['Public'],
-    'veggies_freq': ['Sometimes'],
-    'water_daily': ['1 to 2'],
-    'weight': [80]
-})
+# user_data = pd.DataFrame({
+#     'age': [21], 
+#     'alcohol_freq': ['Never'],
+#     'caloric_freq': ['no'],
+#     'devices_perday': ['up to 5'],
+#     'eat_between_meals': ['Sometimes'],
+#     'gender': ['Female'],
+#     'height': [1.62], 
+#     'meals_perday': [3],
+#     'monitor_calories': ['no'],
+#     'parent_overweight': ['yes'],
+#     'physical_activity_perweek': ['None'], 
+#     'siblings': [3],
+#     'smoke': ['no'],
+#     'transportation': ['Public'],
+#     'veggies_freq': ['Sometimes'],
+#     'water_daily': ['1 to 2'],
+#     'weight': [80]
+# })
 
-prediction = process_and_predict(user_data)
-print(f"Predicted obesity level: {prediction}")
+# prediction = process_and_predict(user_data)
+# print(f"Predicted obesity level: {prediction}")
