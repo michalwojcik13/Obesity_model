@@ -38,7 +38,7 @@ def main():
         )
         eat_between_meals = st.selectbox(
             "How often do you eat between meals (snacking)?",
-            ('no', 'Sometimes', 'Frequently', 'Always'),
+            ('Never', 'Sometimes', 'Frequently', 'Always'),
             index=1, # Default to Sometimes
             key="eat_between_meals"
         )
@@ -50,7 +50,7 @@ def main():
         )
         water_daily = st.selectbox(
             "How much water do you drink daily?",
-            ('Less than a liter', '1 to 2', 'More than 2 liters'),
+            ('less than 1', '1 to 2', 'more than 2'),
             index=1, # Default to 1 to 2 liters
             key="water_daily"
         )
@@ -59,9 +59,9 @@ def main():
             ('no', 'yes'),
             key="monitor_calories"
         )
-        caloric_freq = st.selectbox( # Assuming this means frequency of high-calorie food
-            "How frequently do you consume high-caloric food?",
-            ('no', 'Sometimes', 'Frequently', 'Always'), # 'no' might mean 'never'
+        caloric_freq = st.selectbox( 
+            "Do you frequently eats sweets/chocolate?",
+            ('no', 'yes'), 
             index=0, # Default to 'no'
             key="caloric_freq"
         )
@@ -77,18 +77,18 @@ def main():
         )
         physical_activity_perweek = st.selectbox(
             "How many days per week do you engage in physical activity (at least 30 mins)?",
-            ('None', '1-2 days', '3-4 days', '5 or more days'),
+            ('None', '1 to 2', '3 to 4', '5 or more'),
             key="physical_activity_perweek"
         )
         devices_perday = st.selectbox( # Assuming this means time spent on devices
             "How much time do you spend using technological devices (phone, computer, TV) per day?",
-            ('0-2 hours', '2-5 hours', 'More than 5 hours', 'up to 5'), # Added more granular options
+            ('up to 2', 'up to 5', 'more than 5'), # Added more granular options
             index=3, # Default to 'up to 5 hours' as per original
             key="devices_perday"
         )
         transportation = st.selectbox(
             "What is your usual mode of transportation?",
-            ('Public', 'Automobile', 'Walking', 'Bike', 'Motorbike', 'Other'),
+            ('Public', 'Car', 'Bicycle', 'Motorbike', 'Walk'),
             key="transportation"
         )
 
