@@ -83,7 +83,7 @@ def main():
         devices_perday = st.selectbox( # Assuming this means time spent on devices
             "How much time do you spend using technological devices (phone, computer, TV) per day?",
             ('up to 2', 'up to 5', 'more than 5'), # Added more granular options
-            index=3, # Default to 'up to 5 hours' as per original
+            index=2, # Default to 'up to 5 hours' as per original
             key="devices_perday"
         )
         transportation = st.selectbox(
