@@ -149,7 +149,7 @@ def process_and_predict(input_df: pd.DataFrame) -> str:
     }
     
     # Return prediction as string (for a single input, we get the first element)
-    return hash_obesity_inverted[prediction[0]]
+    return hash_obesity_inverted[prediction[0]] 
 
 # Usage example:
 # user_data = pd.DataFrame({
